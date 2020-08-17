@@ -16,6 +16,9 @@ namespace _102_PracticeTest1_Temperatures
         //Name:
         //ID:
 
+        const int BAR_HEIGHT = 10;
+        const int MAX_TEMP = 50;
+        const int GAP = 5;
         List<Reading> temperaturesList = new List<Reading>();
 
         public Form1()
@@ -96,6 +99,49 @@ namespace _102_PracticeTest1_Temperatures
 
                 UpdateListBox();
             }
+        }
+
+        private void graphAverageTempToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // creating the graphics to draw
+            Graphics paper = pictureBoxDisplay.CreateGraphics();
+            SolidBrush br = new SolidBrush(Color.Orange);
+            Pen pen1 = new Pen(Color.Black);
+            double aveTemp = 0;
+            int barWidth;
+            int x = 0;
+            int y = 0;
+            foreach(Reading r in temperaturesList)
+            {
+                aveTemp = r.AveTemp;
+                barWidth = (int)((aveTemp / 50) * pictureBoxDisplay.Width);
+                paper.FillRectangle(br, x, y, barWidth, BAR_HEIGHT);
+                paper.DrawRectangle(pen1, x, y, barWidth, BAR_HEIGHT);
+                y += BAR_HEIGHT + GAP;
+            }
+        }
+
+        private void showMaxAverageTempToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // creating the graphics to draw
+            Graphics paper = pictureBoxDisplay.CreateGraphics();
+            SolidBrush br = new SolidBrush(Color.Red);
+            Pen pen1 = new Pen(Color.Black);
+            int barWidth = 0;
+            int index = 0;
+            double max = temperaturesList[0].AveTemp;
+            // loop through and get the highest average
+            for (int i = 1; i < temperaturesList.Count; i++)
+            {
+                if (temperaturesList[i].AveTemp > max)
+                {
+                    max = temperaturesList[i].AveTemp;
+                    index = i;
+                }
+            }
+            barWidth = (int)((max / 50) * pictureBoxDisplay.Width);
+            paper.FillRectangle(br, 0, index * (BAR_HEIGHT + GAP), barWidth, BAR_HEIGHT);
+            paper.DrawRectangle(pen1, 0, index * (BAR_HEIGHT + GAP), barWidth, BAR_HEIGHT);
         }
     }
 }

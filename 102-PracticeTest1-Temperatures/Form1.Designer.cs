@@ -34,6 +34,8 @@
             this.loadFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listBoxData = new System.Windows.Forms.ListBox();
+            this.graphAverageTempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showMaxAverageTempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisplay)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +62,9 @@
             // loadFileToolStripMenuItem
             // 
             this.loadFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadFileToolStripMenuItem1});
+            this.loadFileToolStripMenuItem1,
+            this.graphAverageTempToolStripMenuItem,
+            this.showMaxAverageTempToolStripMenuItem});
             this.loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
             this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.loadFileToolStripMenuItem.Text = "File";
@@ -85,6 +89,20 @@
             this.listBoxData.Name = "listBoxData";
             this.listBoxData.Size = new System.Drawing.Size(328, 396);
             this.listBoxData.TabIndex = 2;
+            // 
+            // graphAverageTempToolStripMenuItem
+            // 
+            this.graphAverageTempToolStripMenuItem.Name = "graphAverageTempToolStripMenuItem";
+            this.graphAverageTempToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.graphAverageTempToolStripMenuItem.Text = "Graph average Temp";
+            this.graphAverageTempToolStripMenuItem.Click += new System.EventHandler(this.graphAverageTempToolStripMenuItem_Click);
+            // 
+            // showMaxAverageTempToolStripMenuItem
+            // 
+            this.showMaxAverageTempToolStripMenuItem.Name = "showMaxAverageTempToolStripMenuItem";
+            this.showMaxAverageTempToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.showMaxAverageTempToolStripMenuItem.Text = "Show max average Temp";
+            this.showMaxAverageTempToolStripMenuItem.Click += new System.EventHandler(this.showMaxAverageTempToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -114,6 +132,8 @@
         private System.Windows.Forms.ToolStripMenuItem loadFileToolStripMenuItem1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListBox listBoxData;
+        private System.Windows.Forms.ToolStripMenuItem graphAverageTempToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showMaxAverageTempToolStripMenuItem;
     }
 }
 

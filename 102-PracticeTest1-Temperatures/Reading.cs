@@ -68,12 +68,20 @@ namespace _102_PracticeTest1_Temperatures
         }
 
         /// <summary>
+        /// Gets the average temperature for the date
+        /// </summary>
+        public double AveTemp
+        {
+            get { return (High + Low) / 2; }
+        }
+
+        /// <summary>
         /// Gets all the information about a reading
         /// </summary>
         /// <returns>All information as a neatly padded out string</returns>
         public override string ToString()
         {
-            return Date.PadRight(15) + High.ToString().PadRight(10) + Low.ToString().PadRight(6) + AverageTemp();
+            return Date.PadRight(15) + High.ToString().PadRight(10) + Low.ToString().PadRight(10) + AveTemp;
         }
 
         /// <summary>
