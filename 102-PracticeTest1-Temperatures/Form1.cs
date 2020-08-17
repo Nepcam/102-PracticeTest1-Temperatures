@@ -143,5 +143,33 @@ namespace _102_PracticeTest1_Temperatures
             paper.FillRectangle(br, 0, index * (BAR_HEIGHT + GAP), barWidth, BAR_HEIGHT);
             paper.DrawRectangle(pen1, 0, index * (BAR_HEIGHT + GAP), barWidth, BAR_HEIGHT);
         }
+
+        private void buttonFindTemp_Click(object sender, EventArgs e)
+        {
+            foreach(Reading r in temperaturesList)
+            {
+                if(r.Date == textBoxDate.Text)
+                {
+                    MessageBox.Show(r.ToString());
+                }
+            }
+        }
+
+        private void buttonCount_Click(object sender, EventArgs e)
+        {
+            double high = 0;
+            int count = 0;
+
+            high = double.Parse(textBoxHigh.Text);
+
+            foreach (Reading r in temperaturesList)
+            {
+               if(r.High > high)
+                {
+                    count++;
+                }
+            }
+            MessageBox.Show(count.ToString());
+        }
     }
 }

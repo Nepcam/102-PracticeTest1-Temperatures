@@ -36,6 +36,10 @@
             this.listBoxData = new System.Windows.Forms.ListBox();
             this.graphAverageTempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showMaxAverageTempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.buttonFindTemp = new System.Windows.Forms.Button();
+            this.buttonCount = new System.Windows.Forms.Button();
+            this.textBoxHigh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisplay)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +59,7 @@
             this.loadFileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1134, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1237, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +76,7 @@
             // loadFileToolStripMenuItem1
             // 
             this.loadFileToolStripMenuItem1.Name = "loadFileToolStripMenuItem1";
-            this.loadFileToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.loadFileToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
             this.loadFileToolStripMenuItem1.Text = "Load File...";
             this.loadFileToolStripMenuItem1.Click += new System.EventHandler(this.loadFileToolStripMenuItem1_Click);
             // 
@@ -93,7 +97,7 @@
             // graphAverageTempToolStripMenuItem
             // 
             this.graphAverageTempToolStripMenuItem.Name = "graphAverageTempToolStripMenuItem";
-            this.graphAverageTempToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.graphAverageTempToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.graphAverageTempToolStripMenuItem.Text = "Graph average Temp";
             this.graphAverageTempToolStripMenuItem.Click += new System.EventHandler(this.graphAverageTempToolStripMenuItem_Click);
             // 
@@ -104,11 +108,49 @@
             this.showMaxAverageTempToolStripMenuItem.Text = "Show max average Temp";
             this.showMaxAverageTempToolStripMenuItem.Click += new System.EventHandler(this.showMaxAverageTempToolStripMenuItem_Click);
             // 
+            // textBoxDate
+            // 
+            this.textBoxDate.Location = new System.Drawing.Point(1128, 36);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDate.TabIndex = 3;
+            // 
+            // buttonFindTemp
+            // 
+            this.buttonFindTemp.Location = new System.Drawing.Point(1128, 68);
+            this.buttonFindTemp.Name = "buttonFindTemp";
+            this.buttonFindTemp.Size = new System.Drawing.Size(100, 56);
+            this.buttonFindTemp.TabIndex = 4;
+            this.buttonFindTemp.Text = "Find Temperatures";
+            this.buttonFindTemp.UseVisualStyleBackColor = true;
+            this.buttonFindTemp.Click += new System.EventHandler(this.buttonFindTemp_Click);
+            // 
+            // buttonCount
+            // 
+            this.buttonCount.Location = new System.Drawing.Point(1128, 173);
+            this.buttonCount.Name = "buttonCount";
+            this.buttonCount.Size = new System.Drawing.Size(100, 56);
+            this.buttonCount.TabIndex = 6;
+            this.buttonCount.Text = "Count Dates";
+            this.buttonCount.UseVisualStyleBackColor = true;
+            this.buttonCount.Click += new System.EventHandler(this.buttonCount_Click);
+            // 
+            // textBoxHigh
+            // 
+            this.textBoxHigh.Location = new System.Drawing.Point(1128, 141);
+            this.textBoxHigh.Name = "textBoxHigh";
+            this.textBoxHigh.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHigh.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 450);
+            this.ClientSize = new System.Drawing.Size(1237, 450);
+            this.Controls.Add(this.buttonCount);
+            this.Controls.Add(this.textBoxHigh);
+            this.Controls.Add(this.buttonFindTemp);
+            this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.listBoxData);
             this.Controls.Add(this.pictureBoxDisplay);
             this.Controls.Add(this.menuStrip1);
@@ -134,6 +176,10 @@
         private System.Windows.Forms.ListBox listBoxData;
         private System.Windows.Forms.ToolStripMenuItem graphAverageTempToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showMaxAverageTempToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.Button buttonFindTemp;
+        private System.Windows.Forms.Button buttonCount;
+        private System.Windows.Forms.TextBox textBoxHigh;
     }
 }
 
